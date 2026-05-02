@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>특일 정보 조회</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>📅 특일 정보 조회</h1>
+
+    <section class="search-box">
+      <!-- 조회 유형 탭 -->
+      <div class="tab-group" id="tabs">
+        <button class="tab active" data-endpoint="holidays">국경일</button>
+        <button class="tab" data-endpoint="restdays">공휴일</button>
+        <button class="tab" data-endpoint="anniversaries">기념일</button>
+        <button class="tab" data-endpoint="24divisions">24절기</button>
+        <button class="tab" data-endpoint="sundrydays">잡절</button>
+      </div>
+
+      <!-- 연/월 선택 -->
+      <div class="filter-row">
+        <select id="year"></select>
+        <select id="month">
+          <option value="">전체 (월 미선택)</option>
+        </select>
+        <button id="searchBtn">조회</button>
+      </div>
+    </section>
+
+    <!-- 결과 영역 -->
+    <section id="result-section">
+      <p class="placeholder">조회 유형과 연도를 선택한 뒤 조회 버튼을 눌러주세요.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
